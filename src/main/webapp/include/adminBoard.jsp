@@ -1,4 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<style>
+button {
+	border-radius: 4px;
+	background-color: #FFF;
+	color: BLACK;
+	font-size: 12px;
+	min-height: 30px;
+	min-width: 60px;
+}
+</style>
 <h2>
 	환영합니다. <br>
 	${userId}님!
