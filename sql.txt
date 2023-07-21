@@ -1,0 +1,66 @@
+create database cafe;
+
+use cafe;
+
+drop table if exists users, posts;
+
+create table users(user_id varchar(20) primary key, user_pw varchar(20) not null, user_name varchar(10) not null, email varchar(30), user_grade int default 5, approved boolean default false, join_date date not null);
+create table posts(post_id int primary key auto_increment, title varchar(50) not null, writer varchar(20) not null, content text, post_grade int default 4, reg_date datetime not null, mod_date datetime not null, hit int default 0);
+
+
+
+
+// 유저 데이터 삽입
+insert into users values('admin1', 'admin1', '관리자 1', 'admin1@admin.com', 0, 1, '2023-07-15');
+insert into users values('admin2', 'admin2', '관리자 2', 'admin2@admin.com', 0, 1, '2023-07-15');
+insert into users values('testId1', 'test1', '테스트 이름 1', 'email1@naver.com', 5, 0, now());
+insert into users values('testId2', 'test2', '테스트 이름 2', 'email2@naver.com', 1, 1, now());
+insert into users values('testId3', 'test3', '테스트 이름 3', 'email3@naver.com', 2, 1, now());
+insert into users values('testId4', 'test4', '테스트 이름 4', 'email4@naver.com', 4, 1, now());
+insert into users values('testId5', 'test5', '테스트 이름 5', 'email5@naver.com', 4, 1, now());
+insert into users values('testId6', 'test6', '테스트 이름 6', 'email6@naver.com', 4, 1, now());
+insert into users values('testId7', 'test7', '테스트 이름 7', 'email7@naver.com', 3, 1, now());
+insert into users values('testId8', 'test8', '테스트 이름 8', 'email8@naver.com', 3, 1, now());
+insert into users values('testId9', 'test9', '테스트 이름 9', 'email9@naver.com', 5, 0, now());
+insert into users values('testId10', 'test10', '테스트 이름 10', 'email10@gmail.com', 1, 1, now());
+insert into users values('testId11', 'test11', '테스트 이름 11', 'email11@gmail.com', 2, 1, now());
+insert into users values('testId12', 'test12', '테스트 이름 12', 'email12@gmail.com', 2, 1, now());
+insert into users values('testId13', 'test13', '테스트 이름 13', 'email13@gmail.com', 4, 1, now());
+insert into users values('testId14', 'test14', '테스트 이름 14', 'email14@gmail.com', 5, 0, now());
+insert into users values('testId15', 'test15', '테스트 이름 15', 'email15@gmail.com', 5, 0, now());
+insert into users values('testId16', 'test16', '테스트 이름 16', 'email16@gmail.com', 5, 0, now());
+insert into users values('testId17', 'test17', '테스트 이름 17', 'email17@gmail.com', 5, 0, now());
+
+
+
+
+// 포스트 데이터 삽입
+insert into posts values(null, 'title1', 'testId2', 'content1', 2, now(), now(), 0);
+insert into posts values(null, 'title2', 'testId2', 'content2', 1, now(), now(), 0);
+insert into posts values(null, 'title3', 'testId3', 'content3', 4, now(), now(), 0);
+insert into posts values(null, 'title4', 'testId3', 'content4', 4, now(), now(), 0);
+insert into posts values(null, 'title5', 'testId3', 'content5', 3, now(), now(), 0);
+insert into posts values(null, 'title6', 'testId4', 'content6', 4, now(), now(), 0);
+insert into posts values(null, 'title7', 'testId5', 'content7', 4, now(), now(), 0);
+insert into posts values(null, 'title8', 'testId6', 'content8', 4, now(), now(), 0);
+insert into posts values(null, 'title9', 'testId6', 'content9', 4, now(), now(), 0);
+insert into posts values(null, 'title10', 'testId7', 'content10', 3, now(), now(), 0);
+insert into posts values(null, 'title11', 'testId7', 'content11', 3, now(), now(), 0);
+insert into posts values(null, 'title12', 'testId7', 'content12', 4, now(), now(), 0);
+insert into posts values(null, 'title13', 'testId7', 'content13', 4, now(), now(), 0);
+insert into posts values(null, 'title14', 'testId7', 'content14', 4, now(), now(), 0);
+insert into posts values(null, 'title15', 'testId8', 'content15', 3, now(), now(), 0);
+insert into posts values(null, 'title16', 'testId8', 'content16', 3, now(), now(), 0);
+insert into posts values(null, 'title17', 'testId8', 'content17', 3, now(), now(), 0);
+insert into posts values(null, 'title18', 'testId10', 'content18', 1, now(), now(), 0);
+insert into posts values(null, 'title19', 'testId10', 'content19', 1, now(), now(), 0);
+insert into posts values(null, 'title20', 'testId10', 'content20', 1, now(), now(), 0);
+insert into posts values(null, 'title21', 'testId11', 'content21', 2, now(), now(), 0);
+insert into posts values(null, 'title22', 'testId11', 'content22', 4, now(), now(), 0);
+insert into posts values(null, 'title23', 'testId12', 'content23', 2, now(), now(), 0);
+insert into posts values(null, 'title24', 'testId12', 'content24', 3, now(), now(), 0);
+insert into posts values(null, 'title25', 'testId12', 'content25', 3, now(), now(), 0);
+insert into posts values(null, 'title26', 'testId12', 'content26', 4, now(), now(), 0);
+insert into posts values(null, 'title27', 'testId13', 'content27', 4, now(), now(), 0);
+insert into posts values(null, 'title28', 'testId13', 'content28', 4, now(), now(), 0);
+insert into posts values(null, 'title29', 'testId13', 'content29', 4, now(), now(), 0);
